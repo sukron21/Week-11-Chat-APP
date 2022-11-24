@@ -1,0 +1,46 @@
+.sideTopCollepse{
+    position: relative !important;
+}
+.cstmCollepsetop{
+    width: max-content;
+    background-color: #7E98DF !important;
+    border: none !important;
+    position: absolute !important;
+    margin-top: 60px;
+    border-radius: 30px 15px 30px 15px;
+}
+
+.collepseStyle{
+    background-color: #7E98DF !important;
+    list-style-type: none;
+}
+.textTopmenu{
+    color: white !important;
+    font-size: 16px;
+    font-family: Rubik;
+    font-weight: 400;
+    text-decoration: none;
+}
+.title{
+    color: #7E98DF;
+    font-size: 29px;
+    font-family: Rubik;
+    font-weight: 500;
+}
+
+.dropStyle{
+    background-color: #7E98DF !important;
+    margin-left: -150px !important;
+}
+
+.textMenu:hover {
+    background-color: #5EB4DD !important;
+}
+
+.textMenu{
+    color: white !important;
+    padding-right: 20px;
+}
+.navCustom:active{
+    background-color: #7E98DF !important;
+}
