@@ -36,6 +36,7 @@ const Home = () => {
         receiver.username === response[0].receiver
       ) {
         setListchat(response);
+        console.log(response)
       }
     });
     setSocketIo(socket);
@@ -81,13 +82,14 @@ const Home = () => {
         console.log(error);
       });
   }, []);
-
+  const [active, isActive] = useState(false)
   const [activeReceiver, setActiveReceiver] = useState({});
   const selectReceiver = (item) => {
     //TAMBAHAN MERESET CHAT
     setListchat([]);
-
+    isActive(false)
     setActiveReceiver(item);
+    isActive(true)
     // console.log(item)
     // set RECEIVER
     localStorage.setItem("receiver", JSON.stringify(item));
@@ -108,6 +110,7 @@ const Home = () => {
   return (
     <>
       <div className="container-fluid">
+        {/* {JSON.stringify(listchat)} */}
         <div className="row">
           <div
             className="col-md-3 border-end "
@@ -301,7 +304,18 @@ const Home = () => {
             </div>
           </div>
           </div>
-          <div
+          {active===false?(
+            <div
+            className="col-md-9"
+            style={{ paddingTop: "20px", paddingLeft: "20px", backgroundColor:"#E5E5E5" }}>
+              <div className=" d-flex flex-column justify-content-center align-items center"
+              style={{marginTop:'25%'}}>
+              <h1 style={{color:'grey'}}>Silahkan pilih orang yang di chat untuk memulai Percakapan</h1>
+            </div>
+            </div>
+          ):(
+            <>
+            <div
             className="col-md-9"
             style={{ paddingTop: "20px", paddingLeft: "20px" }}
           >
@@ -461,6 +475,9 @@ const Home = () => {
               </div>
             </form>
           </div>
+            </>
+          )}
+          
         </div>
       </div>
     </>

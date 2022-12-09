@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+<h1>Telegram (FE)</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
+- [Description](#Description)
+- [Built With](#built-with)
+- [Screenshoots](#screenshoots)
+- [Related Project](#related-project)
+- [Contributing](#contributing)
+- [Run Project](#run-project)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Telegram is a chat real time application, in this application users can chat with fellow users in real time and CRUD on their profile pages. This app was created/developed using Socket.io and the PERN stack (Postgresql, Express JS, React JS, Node JS).
 
-### `npm start`
+## Built With
+This app was built with some technologies below:
+- [JavaScript](https://www.javascript.com/)
+- [Node.js](https://nodejs.org/en/)
+- [React.js](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Axios](https://axios-http.com/)
+- [Postgresql](https://www.postgresql.org/)
+- [Socket.io](https://socket.io/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshoots
+<details>
+  <summary>
+    Login & Register
+  </summary>
+<img src="/screenshoots/login.png" alt="Login Page" />
+<img src="/screenshoots/register.png" alt="Register Page" />
+</details>
 
-### `npm test`
+<details>
+  <summary>
+    Chat Page
+  </summary>
+<img src="/screenshoots/chat.png" alt="chat" />
+<img src="/screenshoots/chatmenu.png" alt="chatmenu" />
+</details>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<details>
+  <summary>
+   Profile Page
+  </summary>
+<img src="/screenshoots/profilepage.png" alt="profile" />
+</details>
 
-### `npm run build`
+<details>
+  <summary>
+   Update Profile
+  </summary>
+<img src="/screenshoots/updateprofile.png" alt="updateprofile" />
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Related Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+RESTful API for this web application, clone this for development Telegram.\
+- [Backend-Telegram](https://github.com/vickomaris/Telegram-BE)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b your/branch`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/yourbranch`)
+5. Open a Pull Request
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Run Project
 
-## Learn More
+Install package : npm i
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Run Project : npm start

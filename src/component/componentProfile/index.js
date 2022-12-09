@@ -2,13 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./style.module.css";
-import icPhone from "../../assets/icPhone.png";
-import icNotif from "../../assets/icNotif.png";
-import icSampah from "../../assets/icSampah.png";
-import icSearch from "../../assets/Search.png";
+import setting from "../../assets/settinglagi.jpg";
 
 const Profile = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const [listuser, setListUser] = useState([]);
   const [update, setUpdate] = useState({
     username: listuser.username,
@@ -16,11 +13,11 @@ const Profile = () => {
     phone: listuser.phone,
   });
   const [login, setLogin] = useState({});
+  const [isActive, setisActive] = useState(false);
   useEffect(() => {
-    
     const user = JSON.parse(localStorage.getItem("user"));
     setLogin(user.data.data);
-    const id =user.data.data.id
+    const id = user.data.data.id;
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/user/${id}`)
       .then((response) => {
@@ -44,7 +41,7 @@ const Profile = () => {
       .then((res) => {
         console.log(res);
         alert("Update Success");
-        return navigate('/chatlist');
+        return navigate("/chatlist");
       })
       .catch((err) => {
         console.log(err);
@@ -60,12 +57,12 @@ const Profile = () => {
       .then((res) => {
         console.log(res);
         alert("Delete Success");
-        return navigate('/')
+        return navigate("/");
       })
       .catch((err) => {
         console.log(err);
-      })
-    }
+      });
+  };
 
   return (
     <>
@@ -75,14 +72,14 @@ const Profile = () => {
           <div className="col-md-3 border-end ">
             {listuser.map((item, index) => (
               <div key={index}>
-                <form onSubmit={(e) => handlePost(e)}>
+                
                   <div className="container ">
                     <div className="name">
                       <div
                         className="d-flex flex"
                         style={{ paddingTop: "20px" }}
                       >
-                        <Link to='/chatlist'>
+                        <Link to="/chatlist">
                           <img
                             src={require("../../assets/back.png")}
                             style={{ width: "15px", height: "20px" }}
@@ -99,7 +96,6 @@ const Profile = () => {
                         >
                           @{item.username}
                         </h6>
-                        
                       </div>
                     </div>
                     <div
@@ -126,14 +122,13 @@ const Profile = () => {
                       <p></p>
                       <input
                         defaultValue={item.phone}
-                        onChange={(e) =>
-                          setUpdate({ ...update, phone: e.target.value })
-                        }
+                        
                         style={{ border: "none" }}
                       />
                     </div>
                     <div className="but">
-                      <button type="submit"
+                      <button
+                        type="submit"
                         style={{
                           border: "none",
                           color: "#7E98DF",
@@ -162,139 +157,85 @@ const Profile = () => {
                         <b>I'm Senior Frontend Developer from Microsoft</b>
                       </p>
                       <p style={{ color: "#848484" }}>Bio</p>
-                      <h4>Setting</h4>
-                      <div className="d-flex" style={{ paddingTop: "20px" }}>
-                        <img
-                          src={require("../../assets/lonceng.png")}
-                          
-                          alt=""
-                        />
-                        <p style={{ paddingLeft: "30px" }}>
-                          Notification and Sound
-                        </p>
-                      </div>
-                      
                     </div>
                   </div>
-                </form>
               </div>
             ))}
-          </div>
-          <div
-            className="col-md-9"
-            style={{ paddingTop: "20px", paddingLeft: "20px" }}
-          >
-            <div className="d-flex flex-row px-5">
-              <img
-                src={require("../../assets/Rectangle 8.png")}
-                
-                alt=""
-              />
-              <div
-                className=" d-flex flex-column justify-content-end me-auto"
-                style={{ paddingLeft: "30px" }}
-              >
-                <p>
-                  <b>Mymother</b>
-                </p>
-                <p style={{ marginTop: "-10px", color: "#7E98DF" }}>Online</p>
-              </div>
-              <button
-                className="mt-3"
-                style={{ border: "none", backgroundColor: "white" }}
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseExample"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-              >
+            <button
+              onClick={() => setisActive(!isActive)}
+              style={{
+                width: "100%",
+                backgroundColor: "white",
+                border: "none",
+              }}
+            >
+              <div className="d-flex" style={{ paddingTop: "20px" }}>
                 <img
-                  className="  "
-                  src={require("../../assets/Profile menu.png")}
-                  style={{ width: "20px", height: "15px" }}
+                  src={require("../../assets/settinglagi.jpg")}
+                  style={{ width: "45px" }}
                   alt=""
                 />
-              </button>
-              <div className="row">
-                <div className=" d-flex justify-content-end pe-5">
-                  <div
-                    className={`collapse  ${styles.sideTopCollepse}`}
-                    id="collapseExample"
-                  >
-                    <div
-                      className={`card card-body ${styles.cstmCollepsetop} end-0`}
-                    >
-                      <ul className={`px-3 ${styles.collepseStyle}`}>
-                        <li className="my-3">
-                          <Link className={`p-0 ${styles.textTopmenu}`} to="#">
-                            <img src={icPhone} alt="setting" className="me-3" />{" "}
-                            Call{" "}
-                          </Link>
-                        </li>
-                        <li className="my-3">
-                          <Link className={`p-0 ${styles.textTopmenu}`} to="#">
-                            <img
-                              src={icSampah}
-                              alt="setting"
-                              className="me-4"
-                            />{" "}
-                            Delete chat history{" "}
-                          </Link>
-                        </li>
-                        <li className="my-3">
-                          <Link className={`p-0 ${styles.textTopmenu}`} to="#">
-                            <img src={icNotif} alt="setting" className="me-4" />{" "}
-                            Mute notification
-                          </Link>
-                        </li>
-                        <li className="my-3">
-                          <Link className={`p-0 ${styles.textTopmenu}`} to="#">
-                            <img
-                              src={icSearch}
-                              alt="setting"
-                              className="me-4"
-                            />
-                            Search
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <h4 style={{ marginLeft: "25%", marginTop:'7px' }}>Setting</h4>
               </div>
-            </div>
-            <div style={{ overflow: "scroll", height: "115vh" }}></div>
-            <form
-            //  onSubmit={onSubmitMessage}
-            >
-              <div style={{ position: "relative" }}>
-                <input
-                  placeholder="Type your message.. "
-                  type="text"
-                  // onChange={(e) => setMessage(e.target.value)} value={message}
-                  style={{
-                    width: "87%",
-                    height: "7vh",
-                    borderRadius: "5px",
-                    border: "none",
-                    backgroundColor: "#FAFAFA",
-                  }}
-                />
-                <button
-                  style={{ height: "7vh", width: "100px", border: "none" }}
-                  type="submit"
-                >
-                  Send
-                </button>
-              </div>
-            </form>
+            </button>
           </div>
+          {isActive !== true ? (
+            <></>
+          ) : (
+            <>
+              <div
+                className="col-md-9"
+                style={{
+                  paddingTop: "20px",
+                  paddingLeft: "20px",
+                  backgroundColor: "#E5E5E5",
+                  height:'100vh'
+                }}
+              >
+                {listuser.map((item, index) => (
+                  <div key={index} className="d-flex flex-column justify-content-center align-items center">
+                  <form onSubmit={(e) => handlePost(e)}>
+                <div
+                  className=" d-flex flex-column justify-content-center align-items center"
+                >
+                  <span>Username</span>
+                  <input defaultValue={item.username} style={{border:'none', borderRadius:'5px',height:'40px'}}
+                  onChange={(e) =>
+                    setUpdate({ ...update, username: e.target.value })
+                  }/>
+                  <span>email</span>
+                  <input defaultValue={item.email} style={{border:'none', borderRadius:'5px',height:'40px'}}
+                  onChange={(e) =>
+                    setUpdate({ ...update, email: e.target.value })
+                  }/>
+                  <span>phone</span>
+                  <input defaultValue={item.phone} style={{border:'none', borderRadius:'5px',height:'40px'}}
+                  onChange={(e) =>
+                    setUpdate({ ...update, phone: e.target.value })
+                  }/>
+                 <button style={{color:'white', marginTop:'20px', border:'none', borderRadius:'5px', backgroundColor:'orange', height:'40px'}} type="submit">Update</button>
+                </div>
+                </form>
+                <button
+                    onClick={(e) => deleteRow(e)}
+                    style={{
+                      border: "none",
+                      backgroundColor: "#7E98DF",
+                      color: "white",
+                      borderRadius: "5px",
+                      marginTop: "20px",
+                      height: "40px",
+                    }}
+                  >
+                    Delete Account
+                  </button>
+                  </div>
+                ))}
+                
+              </div>
+            </>
+          )}
         </div>
-        
-        <button onClick={(e) => deleteRow( e)} style={{border:'none',backgroundColor:'#7E98DF', color:'white', borderRadius:'5px', marginLeft:'80px', marginTop:'20px', height:'30px' }}>
-                          Delete Account
-                        </button>
-                        
       </div>
     </>
   );
