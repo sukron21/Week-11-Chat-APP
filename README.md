@@ -83,5 +83,4 @@ Contributors names and contact info:
 
 - [deploy-vercel](week-11-chat-app.vercel.app)
 - [Repository Backend](https://github.com/sukron21/Week-11-Chat-API)
-
 - [Linkedin](www.linkedin.com/in/furqon-rahmat)
