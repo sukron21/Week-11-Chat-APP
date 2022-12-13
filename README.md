@@ -1,12 +1,5 @@
 <h1>Telegram (FE)</h1>
 
-## Table of contents
-- [Description](#Description)
-- [Built With](#built-with)
-- [Screenshoots](#screenshoots)
-- [Related Project](#related-project)
-- [Contributing](#contributing)
-- [Run Project](#run-project)
 
 ## Description
 
@@ -14,6 +7,7 @@ Telegram is a chat real time application, in this application users can chat wit
 
 ## Built With
 This app was built with some technologies below:
+- [HTML5]
 - [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/en/)
 - [React.js](https://reactjs.org/)
@@ -26,9 +20,14 @@ This app was built with some technologies below:
 ## Screenshoots
 <details>
   <summary>
-    Login & Register
+    Login
   </summary>
 <img src="/screenshoots/login.png" alt="Login Page" />
+</details>
+<details>
+  <summary>
+    Register
+  </summary>
 <img src="/screenshoots/register.png" alt="Register Page" />
 </details>
 
@@ -58,7 +57,7 @@ This app was built with some technologies below:
 ## Related Project
 
 RESTful API for this web application, clone this for development Telegram.\
-- [Backend-Telegram](https://github.com/vickomaris/Telegram-BE)
+- [Backend-Telegram](https://github.com/sukron21/Week-11-Chat-API)
 
 
 ## Contributing
