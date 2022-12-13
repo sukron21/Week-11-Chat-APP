@@ -55,7 +55,7 @@ This app was built with some technologies below:
 
 ## Related Project
 
-RESTful API for this web application, clone this for development Telegram.\
+RESTful API for this web application, clone this for development Telegram.
 - [Backend-Telegram](https://github.com/sukron21/Week-11-Chat-API)
 
 
