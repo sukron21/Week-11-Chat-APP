@@ -7,7 +7,7 @@ Telegram is a chat real time application, in this application users can chat wit
 
 ## Built With
 This app was built with some technologies below:
-- [HTML5]
+- [HTML5](https://www.w3schools.com/html/)
 - [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/en/)
 - [React.js](https://reactjs.org/)
@@ -24,6 +24,7 @@ This app was built with some technologies below:
   </summary>
 <img src="/screenshoots/login.png" alt="Login Page" />
 </details>
+
 <details>
   <summary>
     Register
