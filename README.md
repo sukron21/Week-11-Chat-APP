@@ -36,7 +36,6 @@ This app was built with some technologies below:
     Chat Page
   </summary>
 <img src="/screenshoots/chat.png" alt="chat" />
-<img src="/screenshoots/chatmenu.png" alt="chatmenu" />
 </details>
 
 <details>
