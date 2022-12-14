@@ -83,6 +83,6 @@ Contributors names and contact info:
 1. Rahmat Furqon
 
 - [Linkedin](www.linkedin.com/in/furqon-rahmat)
-- [Link Deploy](week-11-chat-app.vercel.app)
+- [Link Deploy](https://week-11-chat-app.vercel.app/)
 - [Telegram Chat API](https://github.com/sukron21/Week-11-Chat-API)
 - [Telegram Chat App](https://github.com/sukron21/Week-11-Chat-APP)
