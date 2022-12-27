@@ -53,7 +53,7 @@ const Profile = () => {
     const data = JSON.parse(localStorage.getItem("data"));
     // const id = data.data.data.id;
     axios
-      .delete(`http://localhost:3002/user/${login.id}`)
+      .delete(`https://week-11-chat-api-production.up.railway.app/user/${login.id}`)
       .then((res) => {
         console.log(res);
         alert("Delete Success");
